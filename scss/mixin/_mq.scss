@@ -1,0 +1,21 @@
+@use '../setting/config' as cf;
+
+// tb
+@mixin tb() {
+  @media (min-width: cf.$tb) {
+    ._sp {
+      display: none;
+    }
+    ._pc {
+      display: block;
+    }
+    @content;
+  }
+}
+
+// pc
+@mixin pc() {
+  @media (min-width: cf.$pc) {
+    @content;
+  }
+}

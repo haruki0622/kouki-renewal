@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+// base
+@use "../scss/base/riset";
+@use "../scss/base/base";
+
+// module
+@use "./module/header";
+@use "./module/main";
+@use "./module/gnav";
+@use "./module/bgm";
+

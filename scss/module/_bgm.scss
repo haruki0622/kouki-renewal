@@ -1,0 +1,19 @@
+.bgm {
+  position:fixed;
+  top: 0;
+  right:0;
+  left: -600px;
+  height: 100vh;
+  z-index: -1;
+  &-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+}

@@ -1,0 +1,17 @@
+@use '../setting/config' as cf;
+
+body{
+  color: cf.$base-color;
+  font-family: cf.$base-font-family;
+  font-size: 14px;
+  width: 100%;
+}
+._pc {
+  display: none;
+}
+
+@media (min-width: cf.$tb) {
+  body {
+    font-size:15px
+  }
+}
