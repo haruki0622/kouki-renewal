@@ -1,4 +1,5 @@
 @use "../mixin/btn" as bt;
+@use "../setting/config" as cf;
 
 .main {
   z-index: 1;
@@ -11,8 +12,9 @@
     left: 60px;
   }
   &-tit {
-    font-size: 60px;
+    font-size:60px;
     line-height: 1.2;
+    font-family: cf.$en-font;
   }
   &-txt {
     font-size: 30px;
@@ -27,6 +29,8 @@
   }
   &-img {
     min-width: 320px;
+    max-width: 430px;
+    width: 100%;
   }
   &-tit {
     font-size: 35px;
@@ -40,7 +44,7 @@
   }
   &-txt {
     line-height: 2;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
     margin-bottom: 20px;
   }
   &-link {

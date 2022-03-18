@@ -1,3 +1,5 @@
+@use "../mixin/mq" as mq;
+
 .gnav {
   position:fixed;
   top: 0;
@@ -6,28 +8,44 @@
   height: 100vh;
   z-index: -1;
   transition: all 0.5s;
-  // display: none;
   background-color:rgba(000,000,000,0.9);
+  @include mq.tb {
+    right: 0;
+    position:static;
+    height: auto;
+    width: auto;
+    background-color:transparent;
+  }
   &-list {
-    width: 80vw;
-    position:absolute;
+    position:relative;
+    width: 60%;
     top: 100px;
     left: 30px;
     display: flex;
     justify-content:center;
     flex-direction:column;
+    @include mq.tb {
+      position:static;
+      flex-direction:row;
+    }
   }
   &-item {
     font-size: 22px;
     padding-bottom: 10px;
     border-bottom: 1px solid gray;
     margin-bottom: 50px;
+    @include mq.tb {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom:0;
+      font-size: 16px;
+      margin-left: 20px;
+    }
   }
   &-txt {
     color: #fff;
   }
 }
-
 .gnav.open {
   right:0;
   transition: all 0.5s;

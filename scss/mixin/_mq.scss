@@ -1,8 +1,11 @@
-@use '../setting/config' as cf;
+@use "../setting/config" as cf;
 
 // tb
 @mixin tb() {
   @media (min-width: cf.$tb) {
+    body {
+      font-size: 18px;
+    }
     ._sp {
       display: none;
     }
