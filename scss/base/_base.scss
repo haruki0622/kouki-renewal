@@ -3,11 +3,8 @@
 body{
   color: cf.$base-color;
   font-family: cf.$base-font-family;
-  font-size: 14px;
+  font-size: 16px;
   width: 100%;
-}
-._pc {
-  display: none;
 }
 
 @media (min-width: cf.$tb) {

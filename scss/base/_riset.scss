@@ -130,6 +130,7 @@ a {
 
 img {
   width: 100%;
+  border-radius:10px;
 }
 
 /* change colours to suit your needs */
@@ -175,4 +176,7 @@ hr {
 input,
 select {
   vertical-align: middle;
+}
+li {
+  list-style: none;
 }

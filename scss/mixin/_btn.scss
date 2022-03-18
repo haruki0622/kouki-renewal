@@ -1,0 +1,11 @@
+@use "../setting/config" as cf;
+
+@mixin btn() {
+  color: #fff;
+  transition:all 0.3s;
+  font-family:cf.$en-font;
+    &:hover {
+      opacity: 0.7;
+      transition: all 0.3s;
+    }
+}

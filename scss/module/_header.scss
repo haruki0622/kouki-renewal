@@ -5,15 +5,16 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: 100;
   &-inner {
     display: flex;
-    height: 70px;
+    height: 55px;
     justify-content: space-between;
     align-items: center;
     padding:0 15px;
   }
   &-logo {
-    width: 200px;
+    width: 180px;
   }
   @include mq.tb {
     background-color: red;
@@ -29,6 +30,13 @@
     background-color:#fff;
     height: 2px;
     margin: 3px 0;
+    transition: .3s;
+  }
+  &-bar.open:nth-child(1) {
+    transform: translateY(4px) rotate(45deg);
+  }
+  &-bar.open:nth-child(2) {
+    transform: translateY(-4px) rotate(-45deg);
   }
 }
 
