@@ -192,6 +192,15 @@ body {
   display: block;
 }
 
+@media (min-width: 767px) {
+  ._sp {
+    display: none;
+  }
+
+  body {
+    font-size: 18px;
+  }
+}
 .header {
   position: fixed;
   top: 0;
@@ -280,29 +289,70 @@ body {
 .sec {
   color: #fff;
   padding-bottom: 100px;
-  margin: 100px 0;
-}
-.sec-inner {
+  margin-bottom: 200px;
   padding: 0 15px;
+}
+@media (min-width: 767px) {
+  .sec-inner {
+    display: flex;
+  }
+  .sec-inner body {
+    font-size: 18px;
+  }
+  .sec-inner ._sp {
+    display: none;
+  }
+  .sec-inner ._pc {
+    display: block;
+  }
 }
 .sec-img {
   min-width: 340px;
   max-width: 450px;
-  width: 100%;
+}
+@media (min-width: 767px) {
+  .sec-box {
+    margin-left: 30px;
+  }
+  .sec-box body {
+    font-size: 18px;
+  }
+  .sec-box ._sp {
+    display: none;
+  }
+  .sec-box ._pc {
+    display: block;
+  }
 }
 .sec-tit {
   font-size: 35px;
-  margin: 15px 0 40px;
+  margin-bottom: 40px;
   letter-spacing: 0.09em;
+}
+@media (min-width: 767px) {
+  .sec-tit {
+    font-size: 55px;
+  }
+  .sec-tit body {
+    font-size: 18px;
+  }
+  .sec-tit ._sp {
+    display: none;
+  }
+  .sec-tit ._pc {
+    display: block;
+  }
 }
 .sec-tit._sm {
   font-size: 24px;
+  margin-top: 40px;
   margin-bottom: 15px;
   font-weight: normal;
 }
 .sec-txt {
   line-height: 2;
   letter-spacing: 0.05em;
+  margin-top: 40px;
   margin-bottom: 20px;
 }
 .sec-link {
@@ -313,9 +363,6 @@ body {
 .sec-link:hover {
   opacity: 0.7;
   transition: all 0.3s;
-}
-.sec-list {
-  margin-bottom: 50px;
 }
 .sec-item {
   line-height: 1.8;
@@ -346,7 +393,7 @@ body {
 .gnav {
   position: fixed;
   top: 0;
-  right: -100vw;
+  right: -800px;
   width: 100vw;
   height: 100vh;
   z-index: -1;
@@ -384,6 +431,7 @@ body {
   .gnav-list {
     position: static;
     flex-direction: row;
+    width: auto;
   }
   .gnav-list body {
     font-size: 18px;
@@ -423,7 +471,7 @@ body {
   color: #fff;
 }
 
-.gnav.open {
+.open {
   right: 0;
   transition: all 0.5s;
 }

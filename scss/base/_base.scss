@@ -9,3 +9,12 @@ body{
 ._sp {
   display:block;
 }
+
+@media (min-width: cf.$tb) {
+  ._sp {
+    display: none;
+  }
+  body {
+    font-size: 18px;
+  }
+}

@@ -3,7 +3,7 @@
 .gnav {
   position:fixed;
   top: 0;
-  right:-100vw;
+  right:-800px;
   width: 100vw;
   height: 100vh;
   z-index: -1;
@@ -27,6 +27,7 @@
     @include mq.tb {
       position:static;
       flex-direction:row;
+      width: auto;
     }
   }
   &-item {
@@ -46,7 +47,7 @@
     color: #fff;
   }
 }
-.gnav.open {
+.open {
   right:0;
   transition: all 0.5s;
   // display:block;
