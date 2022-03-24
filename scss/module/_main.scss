@@ -11,11 +11,22 @@
     position: absolute;
     top: 300px;
     left: 60px;
+    @include mq.pc {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
   &-tit {
     font-size:60px;
     line-height: 1.2;
     font-family: cf.$en-font;
+    @include mq.pc {
+      font-size: 100px;
+      ._sp {
+        display: none;
+      }
+    }
   }
   &-txt {
     font-size: 30px;
@@ -26,6 +37,10 @@
   padding-bottom: 100px;
   margin-bottom: 200px;
   padding: 0 15px;
+  @include mq.pc {
+    max-width:1200px;
+    margin: 200px auto;
+  }
   &-inner {
     @include mq.tb {
       display: flex;
@@ -33,7 +48,7 @@
   }
   &-img {
     min-width: 340px;
-    max-width: 450px;
+    max-width: 520px;
   }
   &-box {
     @include mq.tb {
@@ -52,6 +67,9 @@
       margin-top: 40px;
       margin-bottom: 15px;
       font-weight: normal;
+      @include mq.tb {
+        margin-top: 0;
+      }
     }
   }
   &-txt {
@@ -59,11 +77,30 @@
     letter-spacing: 0.05em;
     margin-top: 40px;
     margin-bottom: 20px;
+    @include mq.tb {
+      margin-top: 0;
+    }
   }
   &-link {
     @include bt.btn;
   }
   &-item {
     line-height: 1.8;
+  }
+  .sb_instagram_header {
+    display: none;
+  }
+  ._fd {
+    flex-direction: column;
+  }
+}
+// ._wide {
+//   max-width: 100%;
+// }
+
+.sbi_item {
+  width: 20%;
+  .sbi_photo {
+    height: 260px;
   }
 }

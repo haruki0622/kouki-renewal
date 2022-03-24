@@ -1,19 +1,24 @@
 @use "../mixin/mq" as mq;
 
 .header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 100;
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // left: 0;
+  // z-index: 200;
   &-inner {
     display: flex;
-    height: 65px;
+    height: 50px;
     justify-content: space-between;
     align-items: center;
     padding:0 15px;
     @include mq.tb {
       padding: 0 20px;
+      height: 65px;
+    }
+    @include mq.pc {
+      max-width: 1460px;
+      margin: 0 auto;
     }
   }
   &-logo {

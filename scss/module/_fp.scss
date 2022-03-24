@@ -1,0 +1,72 @@
+@use "../mixin/mq" as mq;
+
+// .page-id-18 {
+.page {
+  .header {
+    background-color: #333;
+  }
+  .footer-item a {
+    color: #333;
+    &:hover {
+      color: #0066CC;
+    }
+  }
+}
+
+.fp {
+  width: 100%;
+  @include mq.tb {
+    max-width:765px;
+    margin: 0 auto;
+  }
+  @include mq.tb {
+    max-width:960px;
+    margin: 0 auto;
+  }
+  &-inner {
+    padding: 0 15px;
+  }
+  &-tit {
+    font-size: 25px;
+    margin: 60px 0 ;
+    font-weight: normal;
+    @include mq.pc {
+      font-size: 36px;
+    }
+  }
+  .table {
+    color: #666666;
+    width: 100%;
+    &-tr {
+      margin-bottom: 40px;
+      display: flex;
+      padding-bottom:8px;
+      border-bottom: 1px solid lightgray;
+      @include mq.pc {
+        padding-bottom: 12px;
+        margin-bottom: 80px;
+      }
+      &-inner {
+        display: flex;
+      }
+    }
+    &-th {
+      display: block;
+      text-align: left;
+      font-weight: normal;
+      width: 30%;
+      font-size:18px;
+      @include mq.pc {
+        font-size: 22px;
+      }
+    }
+    &-td {
+      font-size: 15px;
+      text-align: left;
+      width: 70%;
+      @include mq.pc {
+        font-size: 20px;
+      }
+    }
+  }
+}

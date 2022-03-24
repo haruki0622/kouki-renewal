@@ -1,0 +1,31 @@
+@use "../mixin/mq" as mq;
+
+.ta {
+  margin-bottom: 40px;
+  @include mq.tb {
+    margin-bottom: 70px;
+  }
+  &-inner {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:left;
+    padding-bottom: 13px;
+    border-bottom:1px solid #fff;
+    align-items: center;
+    @include mq.tb {
+      padding-bottom: 20px;
+    }
+  }
+  &-tit {
+    margin-left: 40px;
+    font-size:22px;
+    font-weight:normal;
+    @include mq.tb {
+      margin-left: 130px;
+      font-size:25px
+    }
+  }
+  &-link {
+    color: #fff;
+  }
+}

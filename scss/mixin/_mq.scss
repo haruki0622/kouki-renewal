@@ -3,14 +3,11 @@
 // tb
 @mixin tb() {
   @media (min-width: cf.$tb) {
-    body {
-      font-size: 18px;
+    ._pc {
+      display: block;
     }
     ._sp {
       display: none;
-    }
-    ._pc {
-      display: block;
     }
     @content;
   }
@@ -19,6 +16,9 @@
 // pc
 @mixin pc() {
   @media (min-width: cf.$pc) {
+    ._sp {
+      display: none;
+    }
     @content;
   }
 }

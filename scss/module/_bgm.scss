@@ -1,3 +1,5 @@
+@use "../mixin/mq" as mq;
+
 .bgm {
   position:fixed;
   top: 0;
@@ -5,6 +7,12 @@
   left: -600px;
   height: 100vh;
   z-index: -1;
+  @include mq.tb {
+    left: -400px;
+  }
+  @include mq.pc {
+    left:0;
+  }
   &-cover {
     position: absolute;
     top: 0;
